@@ -1,0 +1,43 @@
+scheme: Gemini
+menu:
+  首页: / || fa fa-home
+  关于我: /about/ || fa fa-user
+  算法竞赛: /categories/算法竞赛/ || fa fa-code
+  随笔: /categories/随笔/ || fa fa-pencil-alt
+  题解: /categories/题解/ || fa fa-book
+menu_settings:
+  icons: true
+  badges: false
+avatar:
+  url: /images/character.png
+  rounded: false
+  rotated: false
+site_state: true
+motion:
+  enable: true
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+excerpt_description: true
+read_more_btn: true
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+footer:
+  since: 2026
+  icon:
+    name: fa fa-heart
+    animated: true
+    color: '#FF6321'
+  powered: true
+  theme:
+    enable: true
+    version: false
+custom_file_path:
+  header: source/_data/header.njk
+  style: source/_data/styles.styl

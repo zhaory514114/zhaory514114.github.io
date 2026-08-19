@@ -1,0 +1,83 @@
+:root {
+  --paper: #FFFFFF;
+  --gold: #FFC23F;
+  --blue: #2D53B5;
+  --orange: #FF6321;
+}
+body {
+  background: var(--blue);
+  color: var(--blue);
+}
+.header {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  border-bottom: 6px solid var(--gold);
+}
+.site-brand-container {
+  background: var(--paper);
+  color: var(--blue);
+}
+.site-title, .site-subtitle, .menu-item a {
+  color: var(--blue) !important;
+}
+.blog-character {
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+}
+.main-inner, .post-block, .comments, .pagination {
+  background: var(--paper);
+}
+.post-block {
+  border-top: 7px solid var(--gold);
+}
+.post-title, .post-title-link {
+  color: var(--blue) !important;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+}
+.post-title {
+  padding: 10px;
+  background: var(--gold);
+  font-size: 1.45em;
+}
+.post-body, .post-meta, .category-all, .collection-title {
+  color: var(--blue);
+}
+a {
+  color: var(--blue);
+}
+.btn, .post-button .btn {
+  color: var(--paper) !important;
+  background: var(--orange) !important;
+  border-color: var(--orange) !important;
+}
+.btn:hover, .post-button .btn:hover {
+  color: var(--orange) !important;
+  background: var(--paper) !important;
+}
+.sidebar {
+  background: var(--blue);
+}
+.sidebar-inner, .site-author-name, .site-description, .links-of-author a {
+  color: var(--paper) !important;
+}
+.footer {
+  color: var(--gold);
+}
+@media (max-width: 767px) {
+  .blog-character {
+    right: 8px;
+    width: 96px;
+    height: 96px;
+  }
+  .post-title {
+    font-size: 1.2em;
+  }
+}
