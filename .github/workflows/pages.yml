@@ -1,23 +1,60 @@
-steps:
-  - uses: actions/checkout@v4
+name: Pages
 
-  - name: Use Node.js 22
-    uses: actions/setup-node@v4
-    with:
-      node-version: '22'
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-  - name: Install pnpm
-    uses: pnpm/action-setup@v4
-    with:
-      version: '11.19.0'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-  - name: Install dependencies
-    run: pnpm install --frozen-lockfile
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
-  - name: Build
-    run: pnpm run build
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  - name: Upload website
-    uses: actions/upload-pages-artifact@v3
-    with:
-      path: ./public
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '11.19.0'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
