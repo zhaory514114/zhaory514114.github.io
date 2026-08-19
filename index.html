@@ -3,10 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>赵若伊的个人主页</title>
+  <meta name="description" content="zhao_ry514114 的个人博客">
+  <title>zhao_ry514114</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <h1>你好，欢迎来到我的个人主页！</h1>
-  <p>这是我使用 GitHub Pages 创建的网站。</p>
+  <header class="site-header">
+    <button class="menu-button" type="button" aria-label="打开或关闭菜单" aria-expanded="true">☰</button>
+    <a class="site-title" href="index.html">zhao_ry514114</a>
+  </header>
+  <nav class="site-nav" aria-label="博客栏目">
+    <a href="#algorithm"><span>☷</span>算法竞赛</a>
+    <a href="#essay"><span>☷</span>随笔</a>
+    <a href="#solutions"><span>☷</span>题解</a>
+  </nav>
+  <main class="post-list">
+    <article class="post-card" id="algorithm">
+      <h1><a href="posts/algorithm.html">我的算法竞赛学习记录</a></h1>
+      <div class="post-meta"><time datetime="2026-08-19">2026-08-19</time><span>算法竞赛</span></div>
+      <p>记录算法竞赛学习过程、比赛总结与知识整理。</p>
+      <a class="read-more" href="posts/algorithm.html">阅读全文 »</a>
+    </article>
+    <article class="post-card" id="essay">
+      <h1><a href="posts/essay.html">第一篇随笔</a></h1>
+      <div class="post-meta"><time datetime="2026-08-19">2026-08-19</time><span>随笔</span></div>
+      <p>这里可以写生活记录、想法和最近发生的事情。</p>
+      <a class="read-more" href="posts/essay.html">阅读全文 »</a>
+    </article>
+    <article class="post-card" id="solutions">
+      <h1><a href="posts/solution.html">题解示例</a></h1>
+      <div class="post-meta"><time datetime="2026-08-19">2026-08-19</time><span>题解</span></div>
+      <p>记录一道题目的题意、思路、复杂度分析与参考代码。</p>
+      <a class="read-more" href="posts/solution.html">阅读全文 »</a>
+    </article>
+  </main>
+  <footer>© 2026 zhao_ry514114</footer>
+  <script>
+    const button = document.querySelector('.menu-button');
+    const nav = document.querySelector('.site-nav');
+    button.addEventListener('click', () => {
+      const hidden = nav.classList.toggle('is-hidden');
+      button.setAttribute('aria-expanded', String(!hidden));
+    });
+  </script>
 </body>
 </html>
