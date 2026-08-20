@@ -9,7 +9,7 @@ menu_settings:
   icons: true
   badges: false
 avatar:
-  url: /images/character.png
+  url: /images/avatar.jpg
   rounded: false
   rotated: false
 site_state: true
