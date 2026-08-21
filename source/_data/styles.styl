@@ -65,8 +65,9 @@ a {
 .sidebar {
   background: var(--blue);
 }
-.sidebar-inner {
-  color: var(--paper) !important;
+.sidebar-inner,
+.sidebar-inner * {
+  color: #2D53B5 !important;
 }
 
 .site-author-name,
@@ -145,4 +146,11 @@ p.site-author-name {
   font-size: 18px !important;
   font-weight: 600 !important;
   text-align: center;
+}
+.sidebar-inner .site-author-name,
+.sidebar-inner .site-author-name *,
+.site-overview .site-author-name,
+.site-overview .site-author-name * {
+  color: #2D53B5 !important;
+  opacity: 1 !important;
 }
