@@ -56,9 +56,21 @@ social:
   AtCoder: https://atcoder.jp/users/zhao_ry514114 || fa fa-laptop-code
   洛谷: https://www.luogu.com.cn/user/1117719 || fa fa-code
   VJudge: https://vjudge.net/user/zhao_ry514114 || fa fa-gavel
-  哔哩哔哩: https://space.bilibili.com/3546836233095731 || fa fa-video
+  bilibili: https://space.bilibili.com/3546836233095731 || fa fa-video
 
 social_icons:
   enable: true
   icons_only: false
   transition: true
+
+comments:
+  style: tabs
+  active: utterances
+  storage: true
+  lazyload: false
+
+utterances:
+  enable: true
+  repo: zhaory514114/zhaory514114.github.io
+  issue_term: pathname
+  theme: github-light
