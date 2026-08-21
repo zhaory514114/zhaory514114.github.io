@@ -154,3 +154,35 @@ p.site-author-name {
   color: #2D53B5 !important;
   opacity: 1 !important;
 }
+/* 强制修复头像信息区域的文字颜色 */
+.sidebar-inner {
+  --text-color: #2D53B5 !important;
+  --link-color: #2D53B5 !important;
+  --link-hover-color: #FF6321 !important;
+}
+
+.sidebar-inner .site-author-name,
+.sidebar-inner .site-description,
+.sidebar-inner .site-state-item,
+.sidebar-inner .site-state-item *,
+.sidebar-inner .links-of-author,
+.sidebar-inner .links-of-author * {
+  color: #2D53B5 !important;
+  -webkit-text-fill-color: #2D53B5 !important;
+  opacity: 1 !important;
+}
+
+/* 跳转按钮 */
+.sidebar-inner .links-of-author-item a {
+  color: #2D53B5 !important;
+  -webkit-text-fill-color: #2D53B5 !important;
+  background: #FFC23F !important;
+}
+
+/* 跳转按钮悬停 */
+.sidebar-inner .links-of-author-item a:hover,
+.sidebar-inner .links-of-author-item a:hover * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: #FF6321 !important;
+}
