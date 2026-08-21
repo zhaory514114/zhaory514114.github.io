@@ -41,3 +41,13 @@ footer:
 custom_file_path:
   header: source/_data/header.njk
   style: source/_data/styles.styl
+math:
+  every_page: true
+
+  mathjax:
+    enable: true
+    tags: ams
+    display_overflow: scroll
+
+  katex:
+    enable: false
