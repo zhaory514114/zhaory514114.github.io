@@ -305,3 +305,38 @@ body {
 .footer-inner {
   font-size: 12px !important;
 }
+/* 顶部：隐藏文字，使用蓝黄背景图 */
+.header {
+  min-height: 160px !important;
+  background-color: #2D53B5 !important;
+  background-image: url('/images/header-background.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+}
+
+/* 去掉网站名称和副标题 */
+.site-title,
+.site-subtitle {
+  display: none !important;
+}
+
+/* 让原来的白色标题区域透明 */
+.site-brand-container,
+.header-inner {
+  min-height: 160px !important;
+  background: transparent !important;
+}
+
+/* 保留左侧菜单按钮 */
+.site-nav-toggle {
+  display: block !important;
+  position: relative;
+  z-index: 10;
+}
+
+/* 保留右侧人物，并放在背景上层 */
+.blog-character {
+  display: block !important;
+  z-index: 5;
+}
