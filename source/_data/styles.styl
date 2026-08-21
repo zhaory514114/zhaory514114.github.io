@@ -350,3 +350,37 @@ body {
   background: #FF6321 !important;
   color: #FFFFFF !important;
 }
+/* 展开的顶部目录改为白色 */
+.site-nav,
+.menu {
+  background: #FFFFFF !important;
+}
+
+.menu .menu-item,
+.menu .menu-item a {
+  color: #2D53B5 !important;
+  background: #FFFFFF !important;
+  -webkit-text-fill-color: #2D53B5 !important;
+}
+
+.menu .menu-item a:hover,
+.menu .menu-item-active a {
+  color: #FFFFFF !important;
+  background: #FF6321 !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* 人物固定在顶部右侧，不再跟随菜单底部 */
+.blog-character {
+  top: 10px !important;
+  bottom: auto !important;
+  right: 18px !important;
+}
+
+@media (max-width: 767px) {
+  .blog-character {
+    top: 4px !important;
+    bottom: auto !important;
+    right: 8px !important;
+  }
+}
