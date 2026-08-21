@@ -384,3 +384,40 @@ body {
     right: 8px !important;
   }
 }
+/* 深色模式：原本的蓝色文字改为黄色 */
+@media (prefers-color-scheme: dark) {
+  body,
+  a,
+  .post-title,
+  .post-title-link,
+  .post-body,
+  .post-meta,
+  .category-all,
+  .collection-title,
+  .menu-item a,
+  .site-author-name,
+  .site-description,
+  .site-state-item,
+  .site-state-item *,
+  .links-of-author,
+  .links-of-author * {
+    color: #FFC23F !important;
+    -webkit-text-fill-color: #FFC23F !important;
+  }
+
+  /* 橘红色按钮继续使用白字 */
+  .btn,
+  .post-button .btn,
+  .menu-item-active a,
+  .menu-item a:hover {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  code,
+  pre {
+    color: #FFC23F !important;
+    -webkit-text-fill-color: #FFC23F !important;
+  }
+}
