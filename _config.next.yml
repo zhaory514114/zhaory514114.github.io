@@ -41,6 +41,7 @@ footer:
 custom_file_path:
   header: source/_data/header.njk
   style: source/_data/styles.styl
+  postBodyEnd: source/_data/post-body-end.njk
 math:
   every_page: true
 
@@ -70,7 +71,7 @@ comments:
   lazyload: false
 
 utterances:
-  enable: true
+  enable: false
   repo: zhaory514114/zhaory514114.github.io
   issue_term: pathname
   theme: github-light
