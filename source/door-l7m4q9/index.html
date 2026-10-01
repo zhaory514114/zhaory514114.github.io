@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src blob:; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'">
+  <title>存档</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div id="gate" class="gate">
+    <div class="gate-card">
+      <div class="brandmark" aria-hidden="true">▤</div>
+      <p class="eyebrow">PRIVATE ARCHIVE</p>
+      <h1 id="gateTitle">你的私人存档</h1>
+      <p id="gateHint" class="muted" role="status">正在检查存档…</p>
+      <form id="unlockForm" hidden>
+        <label for="password">存档密码</label>
+        <input id="password" type="password" autocomplete="current-password" required maxlength="256" spellcheck="false" autocapitalize="off">
+        <button id="unlock" class="primary" disabled>解锁存档</button>
+      </form>
+      <button id="retry" class="gate-retry" type="button" hidden>重新检查</button>
+      <p id="gateError" role="status" class="error"></p>
+      <p class="gate-foot">文字与图片加密保存 · 密码仅用于当前浏览器解密</p>
+      <noscript><p class="error">请启用 JavaScript 后打开加密存档。</p></noscript>
+    </div>
+  </div>
+
+  <div id="workspace" hidden>
+    <header>
+      <div class="brand"><span class="brandmark small" aria-hidden="true">▤</span><div><strong>私人存档</strong><span class="muted">按日留存，随时回看</span></div></div>
+      <div class="actions"><span class="lock-note">离开页面或闲置 5 分钟后锁定</span><button id="lock" type="button">锁定</button></div>
+    </header>
+    <div class="layout">
+      <aside>
+        <div class="aside-top"><p class="eyebrow">日历目录</p><h2 id="daysTotal">聊天日期</h2></div>
+        <label for="accountFilter">来源账号</label>
+        <select id="accountFilter" aria-label="来源账号"><option value="">全部账号 · 合并时间线</option></select>
+        <nav id="days" aria-label="聊天日期"></nav>
+        <div class="aside-bottom">日期按北京时间分组<br>只列出有消息的日期</div>
+      </aside>
+      <main>
+        <div class="main-heading"><div><p class="eyebrow">聊天记录</p><h1 id="viewTitle">按日浏览</h1></div><span id="count" class="count">0 条</span></div>
+        <div class="filters">
+          <label class="search-label" for="search"><span>关键词</span><input id="search" type="search" placeholder="搜索消息或发送者" autocomplete="off" maxlength="500"></label>
+          <label for="from"><span>开始日期</span><input id="from" type="date"></label>
+          <label for="to"><span>结束日期</span><input id="to" type="date"></label>
+          <button id="clear" type="button">清除筛选</button>
+        </div>
+        <p id="status" class="status" role="status"></p>
+        <section id="empty" class="empty" hidden><div class="empty-icon" aria-hidden="true">▤</div><h2>尚未导入聊天记录</h2><p>这份加密存档还没有消息。</p><p class="note">请在本地整理并打包真实记录，再更新网站文件。</p></section>
+        <div id="messages"></div>
+        <button id="more" type="button" hidden>再显示 150 条</button>
+      </main>
+    </div>
+  </div>
+  <dialog id="pictureDialog" aria-labelledby="pictureTitle">
+    <div class="dialog-heading"><h2 id="pictureTitle">图片</h2><button id="pictureClose" type="button" aria-label="关闭图片">×</button></div>
+    <p id="pictureStatus" class="muted" role="status"></p>
+    <img id="picture" alt="聊天图片" hidden>
+  </dialog>
+</body>
+</html>
