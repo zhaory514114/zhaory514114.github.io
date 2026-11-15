@@ -7,11 +7,7 @@ hexo.extend.filter.register('before_generate', function () {
         return category.name === '题解';
       });
 
-    // 题解默认不进入主页，除非文章明确开启
-    if (isSolution && post.show_on_home !== true) {
-      post.hidden = true;
-    }
+    // 必须显式设置 true/false，避免 Hexo 的继承属性被误判。
+    post.hidden = Boolean(isSolution && post.show_on_home !== true);
   });
 });
-
-  
