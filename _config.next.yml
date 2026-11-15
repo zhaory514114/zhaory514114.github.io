@@ -5,6 +5,7 @@ menu:
   算法竞赛: /categories/算法竞赛/ || fa fa-code
   随笔: /categories/随笔/ || fa fa-pencil-alt
   题解: /categories/题解/ || fa fa-book
+  北上: /categories/北上/ || fa fa-map-marker-alt
 menu_settings:
   icons: true
   badges: false
