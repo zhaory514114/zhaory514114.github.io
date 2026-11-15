@@ -2,9 +2,8 @@
 
 const pagination = require('hexo-pagination');
 
-// 等所有插件加载完成后，再替换主页生成器。
+// 等所有插件加载完成后，再覆盖主页生成器。
 hexo.extend.filter.register('before_generate', function () {
-  hexo.extend.generator.unregister('index');
   hexo.extend.generator.register('index', function (locals) {
     const config = this.config;
     const posts = locals.posts.filter(function (post) {
